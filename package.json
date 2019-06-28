@@ -1,11 +1,8 @@
 {
-  "name": "brain-heizo",
+  "name": "brain-games",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "bin": {
-    "braingames": "project/src/bin/brain-games.js"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
