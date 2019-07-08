@@ -7,15 +7,16 @@ const run = (game, message) => {
   console.log(`Hello, ${user}!`);
   const iter = (rounds) => {
     const { correctAnswer, question } = game();
+    const strCorrectAnswer = correctAnswer.toString();
     const answer = readlineSync.question(question);
     if (rounds === 3) {
       console.log(`Congratulations, ${user}!`);
       return true;
     }
-    if (answer === correctAnswer) {
+    if (answer === strCorrectAnswer) {
       console.log('Correct!');
     } else {
-      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${correctAnswer}"\nLet's try again, ${user}`);
+      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${strCorrectAnswer}"\nLet's try again, ${user}`);
       return false;
     }
     return iter(rounds + 1);
