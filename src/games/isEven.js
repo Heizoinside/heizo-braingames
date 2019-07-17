@@ -5,11 +5,11 @@ const message = 'Answer "yes" if number even otherwise answer "no"';
 const game = () => {
   const num = randomInteger(1, 100);
   const evenNum = num % 2 === 0;
-  const obj = {
+  const gameData = {
     correctAnswer: evenNum ? 'yes' : 'no',
-    question: `Question: ${num}\nYour answer: `,
+    question: `${num}\n`,
   };
-  return obj;
+  return gameData;
 };
 const isEven = () => run(game, message);
 export default isEven;

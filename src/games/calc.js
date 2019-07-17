@@ -4,24 +4,24 @@ import run from '../run';
 const message = 'What is the result of the expression?';
 const operations = (num1, num2) => {
   const randomOperator = (num) => {
-    const obj = {};
+    const gameData = {};
     switch (num) {
       case 1:
-        obj.correctAnswer = (num1 + num2);
-        obj.question = `Question: ${num1} + ${num2}\nYour answer: `;
+        gameData.correctAnswer = (num1 + num2);
+        gameData.question = `${num1} + ${num2}`;
         break;
       case 2:
-        obj.correctAnswer = num1 - num2;
-        obj.question = `Question: ${num1} - ${num2}\nYour answer: `;
+        gameData.correctAnswer = num1 - num2;
+        gameData.question = `${num1} - ${num2}`;
         break;
       case 3:
-        obj.correctAnswer = num1 * num2;
-        obj.question = `Question: ${num1} * ${num2}\nYour answer: `;
+        gameData.correctAnswer = num1 * num2;
+        gameData.question = `${num1} * ${num2}`;
         break;
       default:
         return 0;
     }
-    return obj;
+    return gameData;
   };
   return randomOperator(randomInteger(1, 3));
 };
