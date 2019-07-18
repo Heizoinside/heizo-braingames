@@ -7,7 +7,7 @@ const game = () => {
   const evenNum = num % 2 === 0;
   const gameData = {
     correctAnswer: evenNum ? 'yes' : 'no',
-    question: `${num}\n`,
+    question: `${num}`,
   };
   return gameData;
 };
