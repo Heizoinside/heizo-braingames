@@ -11,3 +11,5 @@
 [![asciicast](https://asciinema.org/a/5BOS5HwtGsm20RNYvsfVqC234.svg)](https://asciinema.org/a/5BOS5HwtGsm20RNYvsfVqC234)
 # How to play brain-progression
 [![asciicast](https://asciinema.org/a/za5As8l7ZirDI83Nx7niBTzxy.svg)](https://asciinema.org/a/za5As8l7ZirDI83Nx7niBTzxy)
+# How to play brain-prime
+[![asciicast](https://asciinema.org/a/edjVJPZXm2k14uaS8tfwWlbm6.svg)](https://asciinema.org/a/edjVJPZXm2k14uaS8tfwWlbm6)
