@@ -19,6 +19,12 @@
   "files": [
     "dist"
   ],
+  "description": "Игры braingames",
+  "keywords": [
+    "hexlet project",
+    "brain-games",
+    "braingames-heizo"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
