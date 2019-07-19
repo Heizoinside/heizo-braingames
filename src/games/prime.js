@@ -11,7 +11,6 @@ const isPrime = (num) => {
   };
   return iter(2);
 };
-isPrime(8);
 const game = () => {
   const num = randomInteger(1, 100);
   const gameData = {
