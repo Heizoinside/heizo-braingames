@@ -3,13 +3,13 @@
 [![Build Status](https://travis-ci.org/Heizoinside/heizo-braingames.svg?branch=master)](https://travis-ci.org/Heizoinside/heizo-braingames)
 # How to install
 [![asciicast](https://asciinema.org/a/2c8K4BhHh7fkPbQCiKYkcovJI.svg)](https://asciinema.org/a/2c8K4BhHh7fkPbQCiKYkcovJI)
-# How to play brain-calc
-[![asciicast](https://asciinema.org/a/DYKgg0iPFIrY7SazTzi5sqYzK.svg)](https://asciinema.org/a/DYKgg0iPFIrY7SazTzi5sqYzK)
 # How to play brain-even
-[![asciicast](https://asciinema.org/a/ribTL9Sr85dOefJmB4oPblbrm.svg)](https://asciinema.org/a/ribTL9Sr85dOefJmB4oPblbrm)
+[![asciicast](https://asciinema.org/a/B4TbDj2ZZEfCVwyLZybKsq6ZX.svg)](https://asciinema.org/a/B4TbDj2ZZEfCVwyLZybKsq6ZX)
+# How to play brain-calc
+[![asciicast](https://asciinema.org/a/VWxHg9h63CMzsZdM5gV1RAdl4.svg)](https://asciinema.org/a/VWxHg9h63CMzsZdM5gV1RAdl4)
 # How to play brain-gcd
-[![asciicast](https://asciinema.org/a/5BOS5HwtGsm20RNYvsfVqC234.svg)](https://asciinema.org/a/5BOS5HwtGsm20RNYvsfVqC234)
+[![asciicast](https://asciinema.org/a/aaoVetS2gbavF8GwtDqRA9dU3.svg)](https://asciinema.org/a/aaoVetS2gbavF8GwtDqRA9dU3)
 # How to play brain-progression
-[![asciicast](https://asciinema.org/a/za5As8l7ZirDI83Nx7niBTzxy.svg)](https://asciinema.org/a/za5As8l7ZirDI83Nx7niBTzxy)
+[![asciicast](https://asciinema.org/a/Oc8PRA6PhFQDhAFPKrqz41IrE.svg)](https://asciinema.org/a/Oc8PRA6PhFQDhAFPKrqz41IrE)
 # How to play brain-prime
-[![asciicast](https://asciinema.org/a/edjVJPZXm2k14uaS8tfwWlbm6.svg)](https://asciinema.org/a/edjVJPZXm2k14uaS8tfwWlbm6)
+[![asciicast](https://asciinema.org/a/oxxCXNuOEstwywVbSKG7Clkzj.svg)](https://asciinema.org/a/oxxCXNuOEstwywVbSKG7Clkzj)
