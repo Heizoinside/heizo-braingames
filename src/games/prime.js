@@ -1,5 +1,5 @@
 import randomInteger from '../randomize';
-import run from '../run';
+import run from '..';
 
 const message = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const isPrime = (num) => {

@@ -1,5 +1,5 @@
 import randomInteger from '../randomize';
-import run from '../run';
+import run from '..';
 
 const message = 'What is the result of the expression?';
 const operations = (num1, num2) => {

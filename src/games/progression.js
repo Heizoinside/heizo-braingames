@@ -1,5 +1,5 @@
 import randomInteger from '../randomize';
-import run from '../run';
+import run from '..';
 
 const message = 'What number is missing in the progression?';
 const arrayMaker = () => {

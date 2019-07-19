@@ -1,5 +1,5 @@
 import randomInteger from '../randomize';
-import run from '../run';
+import run from '..';
 
 const message = 'Find the greatest common divisor of given numbers.';
 const nod = (num1, num2) => {
