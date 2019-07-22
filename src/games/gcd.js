@@ -2,7 +2,8 @@ import randomInteger from '../randomize';
 import run from '..';
 
 const message = 'Find the greatest common divisor of given numbers.';
-const nod = (num1, num2) => {
+
+const findDivisor = (num1, num2) => {
   const div = num1 > num2 ? num2 : num1;
   const iter = (acc) => {
     if (num1 % acc === 0 && num2 % acc === 0) {
@@ -12,14 +13,16 @@ const nod = (num1, num2) => {
   };
   return iter(div);
 };
-const game = () => {
+
+const playGame = () => {
   const num1 = randomInteger(1, 100);
   const num2 = randomInteger(1, 100);
   const gameData = {
-    correctAnswer: nod(num1, num2),
+    correctAnswer: findDivisor(num1, num2),
     question: `${num1} ${num2}`,
   };
   return gameData;
 };
-const gcd = () => run(game, message);
+
+const gcd = () => run(playGame, message);
 export default gcd;
