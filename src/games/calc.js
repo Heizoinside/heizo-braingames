@@ -2,33 +2,32 @@ import randomInteger from '../randomize';
 import run from '..';
 
 const message = 'What is the result of the expression?';
-const operations = (num1, num2) => {
-  const randomOperator = (num) => {
-    const gameData = {};
-    switch (num) {
-      case 1:
-        gameData.correctAnswer = (num1 + num2);
-        gameData.question = `${num1} + ${num2}`;
-        break;
-      case 2:
-        gameData.correctAnswer = num1 - num2;
-        gameData.question = `${num1} - ${num2}`;
-        break;
-      case 3:
-        gameData.correctAnswer = num1 * num2;
-        gameData.question = `${num1} * ${num2}`;
-        break;
-      default:
-        return 0;
-    }
-    return gameData;
-  };
-  return randomOperator(randomInteger(1, 3));
-};
-const game = () => {
+
+const operations = [
+  {
+    operator: '+',
+    makeOperation: (a, b) => a + b,
+  },
+  {
+    operator: '-',
+    makeOperation: (a, b) => a - b,
+  },
+  {
+    operator: '*',
+    makeOperation: (a, b) => a * b,
+  },
+];
+
+const playGame = () => {
   const operand1 = randomInteger(1, 9);
   const operand2 = randomInteger(1, 9);
-  return operations(operand1, operand2);
+  const randomOperation = operations[randomInteger(0, operations.length - 1)];
+  const gameData = {
+    question: `${operand1} ${randomOperation.operator} ${operand2}`,
+    correctAnswer: randomOperation.makeOperation(operand1, operand2),
+  };
+  return gameData;
 };
-const calc = () => run(game, message);
+
+const calc = () => run(playGame, message);
 export default calc;
