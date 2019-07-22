@@ -12,7 +12,7 @@ const run = (playGame, message) => {
     const finalAnswer = correctAnswer.toString();
     const userAnswer = readlineSync.question(finalQuestion);
     const incorrectAnswer = `"${userAnswer}" is wrong answer ;(. Correct answer was "${finalAnswer}"\nLet's try again, ${user}`;
-    if (round === 1) {
+    if (round === gameLength) {
       return console.log(`Congratulations, ${user}!`);
     }
     if (userAnswer === finalAnswer) {
@@ -20,8 +20,8 @@ const run = (playGame, message) => {
     } else {
       return console.log(incorrectAnswer);
     }
-    return iter(round - 1);
+    return iter(round + 1);
   };
-  return iter(gameLength);
+  return iter(1);
 };
 export default run;
