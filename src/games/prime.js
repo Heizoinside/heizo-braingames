@@ -20,8 +20,8 @@ const playGame = () => {
 >>>>>>> d96c672... исправления ошибок солгласно замечаниям
   const num = randomInteger(1, 100);
   const gameData = {
+    question: num,
     correctAnswer: isPrime(num) ? 'yes' : 'no',
-    question: `${num}`,
   };
   return gameData;
 };
