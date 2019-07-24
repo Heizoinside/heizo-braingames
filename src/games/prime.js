@@ -2,6 +2,8 @@ import randomInteger from '../randomize';
 import run from '..';
 
 const message = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const startNumber = 1;
+const numbersRange = 100;
 
 const isPrime = (num) => {
   if (num < 2) return false;
@@ -13,13 +15,12 @@ const isPrime = (num) => {
   return iter(2);
 };
 
-const playGame = () => {
+const makeGameData = () => {
   const gameData = {
-    question: randomInteger(1, 100),
+    question: randomInteger(startNumber, numbersRange),
   };
   gameData.correctAnswer = isPrime(gameData.question) ? 'yes' : 'no';
   return gameData;
 };
 
-const prime = () => run(playGame, message);
-export default prime;
+export default () => run(makeGameData, message);

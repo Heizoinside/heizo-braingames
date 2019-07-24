@@ -2,18 +2,17 @@ import randomInteger from '../randomize';
 import run from '..';
 
 const message = 'Answer "yes" if number even otherwise answer "no"';
+const startNumber = 1;
+const numbersRange = 100;
 
 const isEven = num => num % 2 === 0;
 
-const playGame = () => {
-  const num = randomInteger(1, 100);
+const makeGameData = () => {
   const gameData = {
-    correctAnswer: isEven(num) ? 'yes' : 'no',
-    question: num,
+    question: randomInteger(startNumber, numbersRange),
   };
+  gameData.correctAnswer = isEven(gameData.question) ? 'yes' : 'no';
   return gameData;
 };
 
-const even = () => run(playGame, message);
-
-export default even;
+export default () => run(makeGameData, message);

@@ -5,22 +5,23 @@ const run = (playGame, message) => {
   console.log(message);
   const user = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${user}!`);
-  const gameLength = 3;
+  const roundsCount = 3;
   const iter = (round) => {
     const { correctAnswer, question } = playGame();
     const finalQuestion = `Question: ${question}\nYour answer: `;
     const finalAnswer = correctAnswer.toString();
     const userAnswer = readlineSync.question(finalQuestion);
-    const incorrectAnswer = `"${userAnswer}" is wrong answer ;(. Correct answer was "${finalAnswer}"\nLet's try again, ${user}`;
-    if (round === gameLength) {
-      return console.log(`Congratulations, ${user}!`);
+    if (round === roundsCount) {
+      console.log(`Congratulations, ${user}!`);
+      return;
     }
     if (userAnswer === finalAnswer) {
       console.log('Correct!');
     } else {
-      return console.log(incorrectAnswer);
+      console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${finalAnswer}"\nLet's try again, ${user}`);
+      return;
     }
-    return iter(round + 1);
+    iter(round + 1);
   };
   return iter(1);
 };
