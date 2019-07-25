@@ -3,8 +3,8 @@ import run from '..';
 
 const message = 'What number is missing in the progression?';
 const progressionLength = 10;
-const startNumber = 1;
-const numbersRange = 100;
+const randomStart = 1;
+const randomRange = 100;
 
 const makeProgression = () => {
   const firstNum = randomInteger(startNumber, numbersRange);
