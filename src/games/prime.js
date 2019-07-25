@@ -19,7 +19,7 @@ const makeGameData = () => {
   const gameData = {
     question: randomInteger(randomStart, randomRange),
   };
-  gameData.correctAnswer = isPrime(gameData.question) === true ? 'yes' : 'no';
+  gameData.correctAnswer = isPrime(gameData.question) ? 'yes' : 'no';
   return gameData;
 };
 
