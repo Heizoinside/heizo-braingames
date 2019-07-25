@@ -2,8 +2,8 @@ import randomInteger from '../randomize';
 import run from '..';
 
 const message = 'What is the result of the expression?';
-const startNumber = 1;
-const numbersRange = 10;
+const randomStart = 1;
+const randomRange = 10;
 
 const operations = [
   {
@@ -21,8 +21,8 @@ const operations = [
 ];
 
 const makeGameData = () => {
-  const operand1 = randomInteger(startNumber, numbersRange);
-  const operand2 = randomInteger(startNumber, numbersRange);
+  const operand1 = randomInteger(randomStart, randomRange);
+  const operand2 = randomInteger(randomStart, randomRange);
   const randomOperation = operations[randomInteger(0, operations.length - 1)];
   const gameData = {
     question: `${operand1} ${randomOperation.operator} ${operand2}`,
