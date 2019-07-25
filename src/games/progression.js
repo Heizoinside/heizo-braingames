@@ -7,7 +7,7 @@ const randomStart = 1;
 const randomRange = 100;
 
 const makeProgression = () => {
-  const firstNum = randomInteger(startNumber, numbersRange);
+  const firstNum = randomInteger(randomStart, randomRange);
   const iter = (elem, acc) => {
     if (acc.length === progressionLength) {
       return acc;
