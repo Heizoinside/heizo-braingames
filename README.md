@@ -2,7 +2,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/ce99e4793f160670f577/maintainability)](https://codeclimate.com/github/Heizoinside/frontend-project-lvl1/maintainability)
 [![Build Status](https://travis-ci.org/Heizoinside/frontend-project-lvl1.svg?branch=master)](https://travis-ci.org/Heizoinside/frontend-project-lvl1)
 # How to install
-[![asciicast](https://asciinema.org/a/2c8K4BhHh7fkPbQCiKYkcovJI.svg)](https://asciinema.org/a/2c8K4BhHh7fkPbQCiKYkcovJI)
+[![asciicast](https://asciinema.org/a/KfQNXDwHMNkwZloJ8HVb0Q5Mh.svg)](https://asciinema.org/a/KfQNXDwHMNkwZloJ8HVb0Q5Mh)
 # How to play brain-even
 [![asciicast](https://asciinema.org/a/B4TbDj2ZZEfCVwyLZybKsq6ZX.svg)](https://asciinema.org/a/B4TbDj2ZZEfCVwyLZybKsq6ZX)
 # How to play brain-calc
