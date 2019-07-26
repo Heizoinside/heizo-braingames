@@ -7,14 +7,14 @@ const randomStart = 1;
 const randomRange = 100;
 
 const makeProgression = () => {
-  const firstNumber = randomInteger(randomStart, randomRange);
-  const iter = (elem, acc) => {
-    if (acc.length === progressionLength) {
-      return acc;
+  const progressionStart = randomInteger(randomStart, randomRange);
+  const iter = (elem, progression) => {
+    if (progression.length === progressionLength) {
+      return progression;
     }
-    return iter(elem + 2, acc.concat(elem));
+    return iter(elem + 2, progression.concat(elem));
   };
-  return iter(firstNum, []);
+  return iter(progressionStart, []);
 };
 
 const makeGameData = () => {

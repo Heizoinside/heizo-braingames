@@ -7,20 +7,21 @@ const randomRange = 100;
 
 const findGcd = (num1, num2) => {
   const divisor = num1 > num2 ? num2 : num1;
-  const iter = (acc) => {
-    if (num1 % acc === 0 && num2 % acc === 0) {
-      return acc;
+  const iter = (counter) => {
+    if (num1 % counter === 0 && num2 % counter === 0) {
+      return counter;
     }
-    return iter(acc - 1);
+    return iter(counter - 1);
   };
   return iter(divisor);
 };
 
 const makeGameData = () => {
-  const { num1, num2 } = randomInteger(randomStart, randomRange);
+  const num1 = randomInteger(randomStart, randomRange);
+  const num2 = randomInteger(randomStart, randomRange);
   const gameData = {
-    correctAnswer: findGcd(num1, num2),
     question: `${num1} ${num2}`,
+    correctAnswer: findGcd(num1, num2),
   };
   return gameData;
 };
