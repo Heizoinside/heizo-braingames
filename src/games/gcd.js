@@ -6,14 +6,10 @@ const randomStart = 1;
 const randomRange = 100;
 
 const findGcd = (num1, num2) => {
-  const divisor = num1 > num2 ? num2 : num1;
-  const iter = (counter) => {
-    if (num1 % counter === 0 && num2 % counter === 0) {
-      return counter;
-    }
-    return iter(counter - 1);
-  };
-  return iter(divisor);
+  if (num2 === 0) {
+    return num1;
+  }
+  return findGcd(num2, (num1 % num2));
 };
 
 const makeGameData = () => {
