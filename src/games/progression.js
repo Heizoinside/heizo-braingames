@@ -1,32 +1,30 @@
 import randomInteger from '../randomize';
 import run from '..';
 
-const message = 'What number is missing in the progression?';
+const description = 'What number is missing in the progression?';
+const progressionStart = randomInteger(1, 100);
 const progressionLength = 10;
-const randomStart = 1;
-const randomRange = 100;
+const progressionStep = 2;
 
-const makeProgression = () => {
-  const progressionStart = randomInteger(randomStart, randomRange);
+const makeProgression = (start, step, length) => {
   const iter = (elem, progression) => {
-    if (progression.length === progressionLength) {
+    if (progression.length === length) {
       return progression;
     }
-    return iter(elem + 2, progression.concat(elem));
+    return iter(elem + step, progression.concat(elem));
   };
-  return iter(progressionStart, []);
+  return iter(start, []);
 };
 
 const makeGameData = () => {
-  const progression = makeProgression();
-  const randomIndex = randomInteger(0, progression.length - 1);
-  const hiddenNumber = progression[randomIndex];
-  const mappedProgression = progression.map(element => (element === hiddenNumber ? '..' : element));
-  const gameData = {
-    correctAnswer: hiddenNumber,
-    question: mappedProgression.join(' '),
+  const progression = makeProgression(progressionStart, progressionStep, progressionLength);
+  const hiddenIndex = randomInteger(0, progression.length - 1);
+  const correctAnswer = progression[hiddenIndex];
+  const question = progression.map(element => (element === correctAnswer ? '..' : element)).join(' ');
+  return {
+    correctAnswer: correctAnswer.toString(),
+    question,
   };
-  return gameData;
 };
 
-export default () => run(makeGameData, message);
+export default () => run(makeGameData, description);

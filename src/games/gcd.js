@@ -1,9 +1,9 @@
 import randomInteger from '../randomize';
 import run from '..';
 
-const message = 'Find the greatest common divisor of given numbers.';
-const randomStart = 1;
-const randomRange = 100;
+const description = 'Find the greatest common divisor of given numbers.';
+const start = 1;
+const range = 100;
 
 const findGcd = (num1, num2) => {
   if (num2 === 0) {
@@ -13,13 +13,14 @@ const findGcd = (num1, num2) => {
 };
 
 const makeGameData = () => {
-  const num1 = randomInteger(randomStart, randomRange);
-  const num2 = randomInteger(randomStart, randomRange);
-  const gameData = {
-    question: `${num1} ${num2}`,
-    correctAnswer: findGcd(num1, num2),
+  const num1 = randomInteger(start, range);
+  const num2 = randomInteger(start, range);
+  const question = `${num1} ${num2}`;
+  const correctAnswer = findGcd(num1, num2);
+  return {
+    question,
+    correctAnswer: correctAnswer.toString(),
   };
-  return gameData;
 };
 
-export default () => run(makeGameData, message);
+export default () => run(makeGameData, description);

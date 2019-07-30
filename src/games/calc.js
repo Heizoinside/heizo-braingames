@@ -1,9 +1,9 @@
 import randomInteger from '../randomize';
 import run from '..';
 
-const message = 'What is the result of the expression?';
-const randomStart = 1;
-const randomRange = 10;
+const description = 'What is the result of the expression?';
+const start = 1;
+const range = 10;
 
 const operations = [
   {
@@ -21,14 +21,15 @@ const operations = [
 ];
 
 const makeGameData = () => {
-  const operand1 = randomInteger(randomStart, randomRange);
-  const operand2 = randomInteger(randomStart, randomRange);
+  const operand1 = randomInteger(start, range);
+  const operand2 = randomInteger(start, range);
   const randomOperation = operations[randomInteger(0, operations.length - 1)];
-  const gameData = {
-    question: `${operand1} ${randomOperation.operator} ${operand2}`,
-    correctAnswer: randomOperation.operation(operand1, operand2),
+  const question = `${operand1} ${randomOperation.operator} ${operand2}`;
+  const correctAnswer = randomOperation.operation(operand1, operand2);
+  return {
+    question,
+    correctAnswer: correctAnswer.toString(),
   };
-  return gameData;
 };
 
-export default () => run(makeGameData, message);
+export default () => run(makeGameData, description);
