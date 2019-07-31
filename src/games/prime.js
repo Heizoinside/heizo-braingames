@@ -8,7 +8,7 @@ const range = 100;
 const isPrime = (num) => {
   if (num < 2) return false;
   const iter = (divisor) => {
-    if (num === divisor) return true;
+    if ((divisor ** 2) > num) return true;
     if (num % divisor === 0) return false;
     return iter(divisor + 1);
   };
