@@ -3,8 +3,6 @@ import run from '..';
 
 const description = 'What number is missing in the progression?';
 const progressionLength = 10;
-const progressionStep = 2;
-const initial = randomInteger(1, 100);
 
 const makeProgression = (start, step, length) => {
   const iter = (elem, progression) => {
@@ -17,7 +15,9 @@ const makeProgression = (start, step, length) => {
 };
 
 const makeGameData = () => {
-  const progression = makeProgression(initial, progressionStep, progressionLength);
+  const start = randomInteger(1, 100);
+  const step = 2;
+  const progression = makeProgression(start, step, progressionLength);
   const hiddenIndex = randomInteger(0, progression.length - 1);
   const correctAnswer = progression[hiddenIndex];
   const question = progression.map(element => (element === correctAnswer ? '..' : element)).join(' ');
